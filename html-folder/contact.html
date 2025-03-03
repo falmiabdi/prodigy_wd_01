@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <!-- Boxicons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+
+    <style>
+    :root {
+    --secondary-color: #6c757d; /* Change this to your preferred secondary color */}
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-image: url('../responsive-coffee-website-html-and-css-images/images/coffee-hero-section.png'); /* Adjusted path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .contact-container {
+            width: 100%;
+            max-width: 400px;
+            background-image: url('../responsive-coffee-website-html-and-css-images/images/about-image.jpg');
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        /* Social Media Styling */
+        .social_media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social_media .button a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 18px;
+            gap: 5px;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        /* Icon Colors */
+        .bxl-facebook-circle { color: #1877F2; }
+        .bxl-youtube { color: #FF0000; }
+        .bxl-linkedin { color: #0077B5; }
+        .bxl-telegram { color: #0088CC; }
+
+        /* Hover Effects */
+        .social_media .button a:hover {
+            transform: scale(1.1);
+            color: #FF0000 ;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Social Media Icons -->
+        <div class="social_media">
+            <div class="button">
+            <button><a href="https://www.facebook.com" target="_blank">
+                    <i class='bx bxl-facebook-circle'></i> Fbook
+                
+            </div>
+            <div class="button">
+            <button><a href="https://www.youtube.com" target="_blank">
+                    <i class='bx bxl-youtube'></i> Ytube
+                </a></button>
+                
+            </div>
+            <div class="button">
+            <button>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class='bx bxl-linkedin'></i> Lnkdn
+                </a></button>
+            
+            </div>
+          
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ogetti Coffee</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #3d1f1b;
+      color: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-item {
+      margin: 0 15px;
+    }
+
+    .nav-item a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    .toggle-button {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('../responsive-coffee-website-html-and-css-images/images/coffee-hero-section.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: black;
+      margin-top: 60px;
+    }
+
+    .hero-content h1 {
+      font-size: 50px;
+      color: rgb(216, 230, 235);
+      background-color: brown;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero-content{
+    
+          color: rgb(236, 227, 231);
+        border-radius: 16px;
+      background-color: brown;
+      box-shadow: inset;
+      padding: 35px;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      margin-top: 10px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .order-btn {
+      background: red;
+      color: white;
+    }
+
+    .contact-btn {
+      border: 2px solid rgb(236, 154, 154);
+      color: rgb(23, 55, 231);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .toggle-button {
+        display: block;
+      }
+
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #3d1f1b;
+        width: 150px;
+        text-align: right;
+      }
+
+      .nav-menu.show {
+        display: flex;
+      }
+
+      .nav-item {
+        padding: 15px;
+      }
+        .buttons .order-btn{
+margin-bottom: 40px;
+        }
+.buttons .order-btn
+
+{
+margin-bottom: 40px;
+
+
+}
+
+      .buttons .contact-btn{
+position: relative;
+        
+       margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">☕ Coffee</div>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Menu</a></li>
+        <li class="nav-item"><a href="#">Gallery</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+      </ul>
+      <div class="toggle-button" id="toggleBtn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1><em>Best Coffee</em></h1>
+      <p>Enjoy the best coffee experience</p>
+      <p>Welcome to Ogetti Coffee, where every sip brings happiness.</p>
+      <div class="buttons">
+        <a href="#" class="order-btn">Order Now</a>
+        <a href="#" class="contact-btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("toggleBtn").addEventListener("click", function() {
+      document.getElementById("navMenu").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
